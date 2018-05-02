@@ -130,6 +130,8 @@
 				var blobChunk = currentFile.webkitSlice(startByte , stopByte + 1);
 			}else if (currentFile.mozSlice) {
 				var blobChunk = currentFile.mozSlice(startByte , stopByte + 1);
+			}else{
+			        var blobChunk = currentFile.slice(startByte , stopByte + 1);
 			}
 			
 			//Create a new reader object, part of HTML5 File API
